@@ -1,4 +1,4 @@
-﻿# MergeNest — Stages & Steps
+# MergeNest — Stages & Steps
 
 > **FILE PURPOSE & USAGE GUIDE**
 > - **What this file is for:** This is the complete master roadmap and execution checklist for building MergeNest. It divides the entire project into 8 stages and 55 granular, actionable steps (~2–4 hours each).
@@ -17,7 +17,7 @@
 | Step | Stage | Title | Short Summary (What It Builds) | Status |
 |---|---|---|---|:---:|
 | **0.1** | Stage 0 | Initialize Repository & Server Project | Git init, `src/server/` setup, Express/Mongoose packages, root structure | ✅ |
-| **0.2** | Stage 0 | Initialize Client Project | Scaffold `src/client/` with Vite + React + Tailwind CSS v4 | ⬜ |
+| **0.2** | Stage 0 | Initialize Client Project | Scaffold `src/client/` with Vite + React + Tailwind CSS v4 | ✅ |
 | **0.3** | Stage 0 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files | ⬜ |
 | **0.4** | Stage 0 | Set Up Development Tooling | ESLint, Prettier, nodemon, and npm dev/build scripts | ⬜ |
 | **1.1** | Stage 1 | Express App & MongoDB Connection | Express app setup, Mongoose connection, env validation, HTTP server | ⬜ |
@@ -98,7 +98,7 @@
 - **Docs to create:** —
 - **Docs to update:** —
 - **Verify before moving on:** `npm run dev` in `src/client/` starts React app, Tailwind classes render correctly
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 0.3: Create Phase 0 Documentation
 - **What to do:** Create all Phase 0 docs following DOC-CREATION-PLAN.md specifications

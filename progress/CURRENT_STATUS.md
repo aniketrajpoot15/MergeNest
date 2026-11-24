@@ -11,18 +11,18 @@
 > **Last Updated:** 2026-11-24
 >
 > **Current Stage:** Stage 0: Project Setup & Documentation
-> **Current Step:** Step 0.2: Initialize Client Project
-> **Overall Progress:** 1 / 55 steps completed
+> **Current Step:** Step 0.3: Create Phase 0 Documentation
+> **Overall Progress:** 2 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 0.2: Initialize Client Project
-- **What to do:** Scaffold the React frontend with Vite and Tailwind CSS
+### Step 0.3: Create Phase 0 Documentation
+- **What to do:** Create all Phase 0 docs following DOC-CREATION-PLAN.md specifications
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Ready to scaffold frontend
+- **Notes:** Ready to create README, AGENTS.md, PRD, architecture docs
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 0.2 | Initialize Client Project | 2026-11-24 | src/client/ (Vite + React + Tailwind CSS v4) |
 | Step 0.1 | Initialize Repository & Server Project | 2026-11-24 | .gitignore, .env.example, src/server/package.json, docs/ structure, src/client/ placeholder |
 | — | Pre-project Planning | 2026-11-24 | MERGENEST-BLUEPRINT.md, DOC-CREATION-PLAN.md |
 | — | Progress Tracking Setup | 2026-11-24 | progress/STAGES_AND_STEPS.md, progress/CURRENT_STATUS.md |
@@ -52,7 +53,7 @@
 
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
-| Stage 0: Setup & Docs | 🟡 In Progress | 1 | 4 |
+| Stage 0: Setup & Docs | 🟡 In Progress | 2 | 4 |
 | Stage 1: Auth & Users | ⬜ Not Started | 0 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
@@ -71,6 +72,8 @@
 | DOC-CREATION-PLAN.md | Pre-project | ✅ Exists |
 | .gitignore | Step 0.1 | ✅ Exists |
 | .env.example | Step 0.1 | ✅ Exists |
+| src/client/package.json | Step 0.2 | ✅ Exists |
+| src/client/vite.config.js | Step 0.2 | ✅ Exists |
 | src/server/package.json | Step 0.1 | ✅ Exists |
 | progress/STAGES_AND_STEPS.md | Pre-project / Setup | ✅ Exists |
 | progress/CURRENT_STATUS.md | Pre-project / Setup | ✅ Exists |
