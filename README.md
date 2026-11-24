@@ -133,8 +133,28 @@ For step-by-step setup details, see [SETUP.md](SETUP.md).
    ```
 
 5. **Run the development servers:**
-   - **Backend:** `cd src/server && npm run dev` (starts on `http://localhost:5000`)
+   - **Backend:** `cd src/server && npm run dev` (starts on `http://localhost:5000` with nodemon auto-reload)
    - **Frontend:** `cd src/client && npm run dev` (starts on `http://localhost:5173`)
+
+### Available NPM Scripts
+
+#### Backend (`src/server`)
+| Script | Command | Purpose |
+|---|---|---|
+| `dev` | `nodemon src/server.js` | Starts server with live auto-restart on file save |
+| `start` | `node src/server.js` | Runs the server in production mode |
+| `lint` | `eslint src/` | Checks code against ESLint rules |
+| `lint:fix` | `eslint src/ --fix` | Automatically fixes auto-fixable ESLint issues |
+| `format` | `prettier --write "src/**/*.js"` | Formats code with Prettier |
+| `format:check` | `prettier --check "src/**/*.js"` | Verifies that files match Prettier standards |
+
+#### Frontend (`src/client`)
+| Script | Command | Purpose |
+|---|---|---|
+| `dev` | `vite` | Starts local Vite development server with HMR |
+| `build` | `vite build` | Compiles optimized production bundle |
+| `lint` | `oxlint` | High-speed static analysis with Oxlint |
+| `preview` | `vite preview` | Previews production build locally |
 
 ---
 

@@ -19,7 +19,7 @@
 | **0.1** | Stage 0 | Initialize Repository & Server Project | Git init, `src/server/` setup, Express/Mongoose packages, root structure | ✅ |
 | **0.2** | Stage 0 | Initialize Client Project | Scaffold `src/client/` with Vite + React + Tailwind CSS v4 | ✅ |
 | **0.3** | Stage 0 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files | ✅ |
-| **0.4** | Stage 0 | Set Up Development Tooling | ESLint, Prettier, nodemon, and npm dev/build scripts | ⬜ |
+| **0.4** | Stage 0 | Set Up Development Tooling | ESLint, Prettier, nodemon, and npm dev/build scripts | ✅ |
 | **1.1** | Stage 1 | Express App & MongoDB Connection | Express app setup, Mongoose connection, env validation, HTTP server | ⬜ |
 | **1.2** | Stage 1 | Error Handling & Utility Layer | ApiError class, ApiResponse, asyncHandler, global error handler, health check | ⬜ |
 | **1.3** | Stage 1 | User Model & Registration Endpoint | User schema, bcrypt password hash, register endpoint & Zod validation | ⬜ |
@@ -75,7 +75,7 @@
 ---
 
 ## Stage 0: Project Setup & Documentation (Day 1)
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 **Goal:** Repository initialized, documentation created, ready to code.
 
 ### Step 0.1: Initialize Repository & Server Project
@@ -118,7 +118,7 @@
 - **Docs to create:** —
 - **Docs to update:** README.md (add dev setup and scripts section)
 - **Verify before moving on:** `npm run dev` starts the Express server with nodemon, `npm run dev` starts the React app, `npm run lint` runs without config errors
-- **Status:** ⬜
+- **Status:** ✅
 
 ---
 

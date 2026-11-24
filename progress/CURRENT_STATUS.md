@@ -10,19 +10,19 @@
 
 > **Last Updated:** 2026-11-24
 >
-> **Current Stage:** Stage 0: Project Setup & Documentation
-> **Current Step:** Step 0.4: Set Up Development Tooling
-> **Overall Progress:** 3 / 55 steps completed
+> **Current Stage:** Stage 1: Authentication & User Management
+> **Current Step:** Step 1.1: Express App & MongoDB Connection
+> **Overall Progress:** 4 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 0.4: Set Up Development Tooling
-- **What to do:** Configure ESLint, Prettier, nodemon, and npm scripts across client and server
+### Step 1.1: Express App & MongoDB Connection
+- **What to do:** Create Express app entry point, middleware pipeline, environment validation, and MongoDB connection
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Ready to configure tooling
+- **Notes:** Ready to implement Stage 1 backend foundation
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 0.4 | Set Up Development Tooling | 2026-11-24 | src/server/eslint.config.mjs, .prettierrc, .prettierignore, src/server/nodemon.json, README.md |
 | Step 0.3 | Create Phase 0 Documentation | 2026-11-24 | README.md, AGENTS.md, CLAUDE.md, docs/01_Product/PRD.md, docs/03_Architecture/SYSTEM_ARCHITECTURE.md, docs/03_Architecture/DATABASE_DESIGN.md |
 | Step 0.2 | Initialize Client Project | 2026-11-24 | src/client/ (Vite + React + Tailwind CSS v4) |
 | Step 0.1 | Initialize Repository & Server Project | 2026-11-24 | .gitignore, .env.example, src/server/package.json, docs/ structure, src/client/ placeholder |
@@ -43,10 +44,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 0.4 | Set Up Development Tooling | Configure ESLint, Prettier, nodemon, and npm scripts |
 | Step 1.1 | Express App & MongoDB Connection | Create Express entry point, middleware pipeline, and DB connection |
 | Step 1.2 | Error Handling & Utility Layer | Build shared error handling and API response utilities |
 | Step 1.3 | User Model & Registration Endpoint | Create User Mongoose model and registration API endpoint |
+| Step 1.4 | Login, JWT & Auth Middleware | Implement login, JWT in httpOnly cookie, and route protection |
 
 ---
 
@@ -54,8 +55,8 @@
 
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
-| Stage 0: Setup & Docs | 🟡 In Progress | 3 | 4 |
-| Stage 1: Auth & Users | ⬜ Not Started | 0 | 10 |
+| Stage 0: Setup & Docs | ✅ Completed | 4 | 4 |
+| Stage 1: Auth & Users | 🟡 In Progress | 0 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
 | Stage 4: AI Features | ⬜ Not Started | 0 | 9 |
