@@ -11,18 +11,18 @@
 > **Last Updated:** 2026-11-24
 >
 > **Current Stage:** Stage 0: Project Setup & Documentation
-> **Current Step:** Step 0.3: Create Phase 0 Documentation
-> **Overall Progress:** 2 / 55 steps completed
+> **Current Step:** Step 0.4: Set Up Development Tooling
+> **Overall Progress:** 3 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 0.3: Create Phase 0 Documentation
-- **What to do:** Create all Phase 0 docs following DOC-CREATION-PLAN.md specifications
+### Step 0.4: Set Up Development Tooling
+- **What to do:** Configure ESLint, Prettier, nodemon, and npm scripts across client and server
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Ready to create README, AGENTS.md, PRD, architecture docs
+- **Notes:** Ready to configure tooling
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 0.3 | Create Phase 0 Documentation | 2026-11-24 | README.md, AGENTS.md, CLAUDE.md, docs/01_Product/PRD.md, docs/03_Architecture/SYSTEM_ARCHITECTURE.md, docs/03_Architecture/DATABASE_DESIGN.md |
 | Step 0.2 | Initialize Client Project | 2026-11-24 | src/client/ (Vite + React + Tailwind CSS v4) |
 | Step 0.1 | Initialize Repository & Server Project | 2026-11-24 | .gitignore, .env.example, src/server/package.json, docs/ structure, src/client/ placeholder |
 | — | Pre-project Planning | 2026-11-24 | MERGENEST-BLUEPRINT.md, DOC-CREATION-PLAN.md |
@@ -42,10 +43,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 0.3 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files |
 | Step 0.4 | Set Up Development Tooling | Configure ESLint, Prettier, nodemon, and npm scripts |
 | Step 1.1 | Express App & MongoDB Connection | Create Express entry point, middleware pipeline, and DB connection |
 | Step 1.2 | Error Handling & Utility Layer | Build shared error handling and API response utilities |
+| Step 1.3 | User Model & Registration Endpoint | Create User Mongoose model and registration API endpoint |
 
 ---
 
@@ -53,7 +54,7 @@
 
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
-| Stage 0: Setup & Docs | 🟡 In Progress | 2 | 4 |
+| Stage 0: Setup & Docs | 🟡 In Progress | 3 | 4 |
 | Stage 1: Auth & Users | ⬜ Not Started | 0 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
@@ -70,6 +71,12 @@
 |---|---|---|
 | MERGENEST-BLUEPRINT.md | Pre-project | ✅ Exists |
 | DOC-CREATION-PLAN.md | Pre-project | ✅ Exists |
+| README.md | Step 0.3 | ✅ Exists |
+| AGENTS.md | Step 0.3 | ✅ Exists |
+| CLAUDE.md | Step 0.3 | ✅ Exists |
+| docs/01_Product/PRD.md | Step 0.3 | ✅ Exists |
+| docs/03_Architecture/SYSTEM_ARCHITECTURE.md | Step 0.3 | ✅ Exists |
+| docs/03_Architecture/DATABASE_DESIGN.md | Step 0.3 | ✅ Exists |
 | .gitignore | Step 0.1 | ✅ Exists |
 | .env.example | Step 0.1 | ✅ Exists |
 | src/client/package.json | Step 0.2 | ✅ Exists |
