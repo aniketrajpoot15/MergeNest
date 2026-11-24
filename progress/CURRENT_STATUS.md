@@ -1,4 +1,4 @@
-﻿# MergeNest — Current Status
+# MergeNest — Current Status
 
 > **FILE PURPOSE & USAGE GUIDE**
 > - **What this file is for:** This is the live, active status dashboard for the MergeNest project. It tells you and any AI assistant exactly what step is currently being worked on, what was just finished, and what comes next in the queue.
@@ -11,18 +11,18 @@
 > **Last Updated:** 2026-11-24
 >
 > **Current Stage:** Stage 0: Project Setup & Documentation
-> **Current Step:** Step 0.1: Initialize Repository & Server Project
-> **Overall Progress:** 0 / 55 steps completed
+> **Current Step:** Step 0.2: Initialize Client Project
+> **Overall Progress:** 1 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 0.1: Initialize Repository & Server Project
-- **What to do:** Create git repo, initialize the backend npm project, set up root and server folder structure
-- **Started:** 2026-11-24
+### Step 0.2: Initialize Client Project
+- **What to do:** Scaffold the React frontend with Vite and Tailwind CSS
+- **Started:** —
 - **Blockers:** None
-- **Notes:** Ready to initialize repository and setup initial structure
+- **Notes:** Ready to scaffold frontend
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 0.1 | Initialize Repository & Server Project | 2026-11-24 | .gitignore, .env.example, src/server/package.json, docs/ structure, src/client/ placeholder |
 | — | Pre-project Planning | 2026-11-24 | MERGENEST-BLUEPRINT.md, DOC-CREATION-PLAN.md |
 | — | Progress Tracking Setup | 2026-11-24 | progress/STAGES_AND_STEPS.md, progress/CURRENT_STATUS.md |
 | — | Learning System Setup | 2026-11-24 | learning/LEARNING_PROFILE.md, learning/LEARNING_ROADMAP.md, learning/SKILLS_TRACKER.md, learning/LEARNING_LOG.md, learning/INTERVIEW_PREP.md |
@@ -40,10 +41,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 0.2 | Initialize Client Project | Scaffold React frontend with Vite and Tailwind CSS |
 | Step 0.3 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files |
 | Step 0.4 | Set Up Development Tooling | Configure ESLint, Prettier, nodemon, and npm scripts |
 | Step 1.1 | Express App & MongoDB Connection | Create Express entry point, middleware pipeline, and DB connection |
+| Step 1.2 | Error Handling & Utility Layer | Build shared error handling and API response utilities |
 
 ---
 
@@ -51,7 +52,7 @@
 
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
-| Stage 0: Setup & Docs | 🟡 In Progress | 0 | 4 |
+| Stage 0: Setup & Docs | 🟡 In Progress | 1 | 4 |
 | Stage 1: Auth & Users | ⬜ Not Started | 0 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
@@ -68,6 +69,9 @@
 |---|---|---|
 | MERGENEST-BLUEPRINT.md | Pre-project | ✅ Exists |
 | DOC-CREATION-PLAN.md | Pre-project | ✅ Exists |
+| .gitignore | Step 0.1 | ✅ Exists |
+| .env.example | Step 0.1 | ✅ Exists |
+| src/server/package.json | Step 0.1 | ✅ Exists |
 | progress/STAGES_AND_STEPS.md | Pre-project / Setup | ✅ Exists |
 | progress/CURRENT_STATUS.md | Pre-project / Setup | ✅ Exists |
 | learning/LEARNING_PROFILE.md | Pre-project / Setup | ✅ Exists |

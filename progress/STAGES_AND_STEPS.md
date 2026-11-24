@@ -16,7 +16,7 @@
 
 | Step | Stage | Title | Short Summary (What It Builds) | Status |
 |---|---|---|---|:---:|
-| **0.1** | Stage 0 | Initialize Repository & Server Project | Git init, `src/server/` setup, Express/Mongoose packages, root structure | ⬜ |
+| **0.1** | Stage 0 | Initialize Repository & Server Project | Git init, `src/server/` setup, Express/Mongoose packages, root structure | ✅ |
 | **0.2** | Stage 0 | Initialize Client Project | Scaffold `src/client/` with Vite + React + Tailwind CSS v4 | ⬜ |
 | **0.3** | Stage 0 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files | ⬜ |
 | **0.4** | Stage 0 | Set Up Development Tooling | ESLint, Prettier, nodemon, and npm dev/build scripts | ⬜ |
@@ -87,7 +87,7 @@
 - **Docs to create:** .gitignore, .env.example
 - **Docs to update:** —
 - **Verify before moving on:** Git repo exists, `npm install` runs in `src/server/` without errors, folder structure matches plan
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 0.2: Initialize Client Project
 - **What to do:** Scaffold the React frontend with Vite and Tailwind CSS
