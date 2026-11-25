@@ -20,7 +20,7 @@
 | **0.2** | Stage 0 | Initialize Client Project | Scaffold `src/client/` with Vite + React + Tailwind CSS v4 | ✅ |
 | **0.3** | Stage 0 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files | ✅ |
 | **0.4** | Stage 0 | Set Up Development Tooling | ESLint, Prettier, nodemon, and npm dev/build scripts | ✅ |
-| **1.1** | Stage 1 | Express App & MongoDB Connection | Express app setup, Mongoose connection, env validation, HTTP server | ⬜ |
+| **1.1** | Stage 1 | Express App & MongoDB Connection | Express app setup, Mongoose connection, env validation, HTTP server | ✅ |
 | **1.2** | Stage 1 | Error Handling & Utility Layer | ApiError class, ApiResponse, asyncHandler, global error handler, health check | ⬜ |
 | **1.3** | Stage 1 | User Model & Registration Endpoint | User schema, bcrypt password hash, register endpoint & Zod validation | ⬜ |
 | **1.4** | Stage 1 | Login, JWT & Auth Middleware | Login endpoint, JWT generation in httpOnly cookie, auth middleware | ⬜ |
@@ -123,7 +123,7 @@
 ---
 
 ## Stage 1: Authentication & User Management (Week 1)
-**Status:** ⬜ Not Started
+**Status:** 🟡 In Progress
 **Goal:** Users can register, login, logout, view/edit profile, connect GitHub.
 
 ### Step 1.1: Express App & MongoDB Connection
@@ -136,7 +136,7 @@
 - **Docs to create:** SETUP.md
 - **Docs to update:** —
 - **Verify before moving on:** `npm run dev` starts server, logs "Connected to MongoDB", server listens on configured port
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 1.2: Error Handling & Utility Layer
 - **What to do:** Build the shared error handling and API response utilities

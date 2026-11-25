@@ -2,6 +2,7 @@
   "name": "mergenest-server",
   "version": "1.0.0",
   "description": "MergeNest — AI-powered collaborative development platform (backend)",
+  "type": "module",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

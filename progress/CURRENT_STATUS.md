@@ -8,21 +8,21 @@
 
 ---
 
-> **Last Updated:** 2026-11-24
+> **Last Updated:** 2026-11-25
 >
 > **Current Stage:** Stage 1: Authentication & User Management
-> **Current Step:** Step 1.1: Express App & MongoDB Connection
-> **Overall Progress:** 4 / 55 steps completed
+> **Current Step:** Step 1.2: Error Handling & Utility Layer
+> **Overall Progress:** 5 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 1.1: Express App & MongoDB Connection
-- **What to do:** Create Express app entry point, middleware pipeline, environment validation, and MongoDB connection
+### Step 1.2: Error Handling & Utility Layer
+- **What to do:** Build shared error handling (`ApiError`, `asyncHandler`, global error handler), `ApiResponse`, and `GET /api/v1/health`
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Ready to implement Stage 1 backend foundation
+- **Notes:** Ready for Step 1.2 study prep & implementation
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 1.1 | Express App & MongoDB Connection | 2026-11-25 | src/server/src/app.js, src/server/src/server.js, src/server/src/config/database.js, src/server/src/config/env.js, SETUP.md |
 | Step 0.4 | Set Up Development Tooling | 2026-11-24 | src/server/eslint.config.mjs, .prettierrc, .prettierignore, src/server/nodemon.json, README.md |
 | Step 0.3 | Create Phase 0 Documentation | 2026-11-24 | README.md, AGENTS.md, CLAUDE.md, docs/01_Product/PRD.md, docs/03_Architecture/SYSTEM_ARCHITECTURE.md, docs/03_Architecture/DATABASE_DESIGN.md |
 | Step 0.2 | Initialize Client Project | 2026-11-24 | src/client/ (Vite + React + Tailwind CSS v4) |
@@ -44,10 +45,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 1.1 | Express App & MongoDB Connection | Create Express entry point, middleware pipeline, and DB connection |
 | Step 1.2 | Error Handling & Utility Layer | Build shared error handling and API response utilities |
 | Step 1.3 | User Model & Registration Endpoint | Create User Mongoose model and registration API endpoint |
 | Step 1.4 | Login, JWT & Auth Middleware | Implement login, JWT in httpOnly cookie, and route protection |
+| Step 1.5 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance |
 
 ---
 
@@ -56,7 +57,7 @@
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
 | Stage 0: Setup & Docs | ✅ Completed | 4 | 4 |
-| Stage 1: Auth & Users | 🟡 In Progress | 0 | 10 |
+| Stage 1: Auth & Users | 🟡 In Progress | 1 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
 | Stage 4: AI Features | ⬜ Not Started | 0 | 9 |
@@ -72,6 +73,7 @@
 |---|---|---|
 | MERGENEST-BLUEPRINT.md | Pre-project | ✅ Exists |
 | DOC-CREATION-PLAN.md | Pre-project | ✅ Exists |
+| SETUP.md | Step 1.1 | ✅ Exists |
 | README.md | Step 0.3 | ✅ Exists |
 | AGENTS.md | Step 0.3 | ✅ Exists |
 | CLAUDE.md | Step 0.3 | ✅ Exists |
