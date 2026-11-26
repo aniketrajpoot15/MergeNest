@@ -21,8 +21,8 @@
 | **0.3** | Stage 0 | Create Phase 0 Documentation | Create README, AGENTS.md, PRD, architecture, and learning files | ✅ |
 | **0.4** | Stage 0 | Set Up Development Tooling | ESLint, Prettier, nodemon, and npm dev/build scripts | ✅ |
 | **1.1** | Stage 1 | Express App & MongoDB Connection | Express app setup, Mongoose connection, env validation, HTTP server | ✅ |
-| **1.2** | Stage 1 | Error Handling & Utility Layer | ApiError class, ApiResponse, asyncHandler, global error handler, health check | ⬜ |
-| **1.3** | Stage 1 | User Model & Registration Endpoint | User schema, bcrypt password hash, register endpoint & Zod validation | ⬜ |
+| **1.2** | Stage 1 | Error Handling & Utility Layer | ApiError class, ApiResponse, asyncHandler, global error handler, health check | ✅ |
+| **1.3** | Stage 1 | User Model & Registration Endpoint | User schema, bcrypt password hash, register endpoint & Zod validation | ✅ |
 | **1.4** | Stage 1 | Login, JWT & Auth Middleware | Login endpoint, JWT generation in httpOnly cookie, auth middleware | ⬜ |
 | **1.5** | Stage 1 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance | ⬜ |
 | **1.6** | Stage 1 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation | ⬜ |
@@ -149,7 +149,7 @@
 - **Docs to create:** BACKEND_ARCHITECTURE.md, API_STANDARDS.md
 - **Docs to update:** —
 - **Verify before moving on:** Health check returns 200, unknown routes return 404 in standard format, throwing ApiError returns correct status and message
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 1.3: User Model & Registration Endpoint
 - **What to do:** Create User Mongoose model and registration API endpoint
@@ -163,7 +163,7 @@
 - **Docs to create:** ADR/003_authentication.md
 - **Docs to update:** DATABASE_DESIGN.md (add User collection)
 - **Verify before moving on:** POST /register creates user with hashed password, rejects duplicate email, rejects invalid input with descriptive errors
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 1.4: Login, JWT & Auth Middleware
 - **What to do:** Login endpoint, JWT generation in httpOnly cookie, auth middleware for protected routes

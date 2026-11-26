@@ -29,17 +29,18 @@
   | `_id` | ObjectId | Auto | Primary Key | Primary |
   | `name` | String | Yes | User display name | — |
   | `email` | String | Yes | Unique login email (lowercase, trimmed) | Unique |
-  | `password` | String | Yes* | Bcrypt password hash (*optional for GitHub-only auth) | — |
-  | `avatar` | String | No | Profile photo URL | — |
-  | `bio` | String | No | Short user biography | — |
-  | `skills` | [String] | No | Array of technologies/skills | — |
-  | `githubId` | String | No | GitHub user ID | Unique, Sparse |
+  | `password` | String | Yes* | Bcrypt password hash (cost 12, `select: false`; *optional for GitHub-only auth) | — |
+  | `avatar` | String | No | Profile photo URL (default `""`) | — |
+  | `bio` | String | No | Short user biography (max 300 chars, default `""`) | — |
+  | `skills` | [String] | No | Array of technologies/skills (default `[]`) | — |
+  | `githubId` | String | No | GitHub user ID (kept `undefined` when unset) | Unique, Sparse |
   | `githubUsername` | String | No | GitHub username handle | — |
-  | `githubAccessToken`| String | No | AES-256 encrypted OAuth access token | — |
+  | `githubAccessToken`| String | No | AES-256 encrypted OAuth access token (`select: false`) | — |
   | `createdAt` | Date | Auto | Account creation timestamp | — |
   | `updatedAt` | Date | Auto | Profile last updated timestamp | — |
 - **Indexes:** `{ email: 1 }` (unique), `{ githubId: 1 }` (unique, sparse).
-- **Access Patterns:** Find by email (login), find by githubId (OAuth callback), find by `_id` (session verification).
+- **Access Patterns:** Find by email (login/registration), find by githubId (OAuth callback), find by `_id` (session verification).
+- **Notes:** Schema `toJSON` transform strips `password`, `githubAccessToken`, and `__v`. `githubId` must remain omitted (`undefined`) rather than `null` for non-GitHub users so the sparse unique index ignores them.
 
 ---
 

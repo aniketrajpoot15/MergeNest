@@ -11,7 +11,7 @@
 
 MergeNest is an AI-powered collaborative development platform where teams connect GitHub repositories, review pull requests with AI-powered code analysis, and collaborate on software projects. Built as a MERN stack application with Google Gemini AI integration.
 
-- **Current phase:** Stage 0 — Project Setup & Documentation
+- **Current phase:** Stage 1 — Authentication & User Management
 - **Architecture:** Modular Monolith (`src/server/src/modules/`)
 - **Key references:** [PRD](docs/01_Product/PRD.md) | [System Architecture](docs/03_Architecture/SYSTEM_ARCHITECTURE.md) | [Database Design](docs/03_Architecture/DATABASE_DESIGN.md) | [Blueprint](MERGENEST-BLUEPRINT.md)
 

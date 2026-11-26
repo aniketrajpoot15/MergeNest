@@ -71,7 +71,7 @@
 
 | Technology | Purpose |
 |---|---|
-| **React 18** | Frontend Single Page Application (SPA) |
+| **React 19** | Frontend Single Page Application (SPA) |
 | **Vite** | Modern, fast frontend build tooling and dev server |
 | **Tailwind CSS v4** | Utility-first responsive styling system |
 | **Node.js** | Backend JavaScript runtime |
@@ -180,7 +180,7 @@ MergeNest/
 │   ├── CURRENT_STATUS.md      # Live step status and active blockers
 │   └── STAGES_AND_STEPS.md    # Master 55-step execution checklist
 ├── src/
-│   ├── client/                # React 18 frontend (Vite + Tailwind CSS v4)
+│   ├── client/                # React 19 frontend (Vite + Tailwind CSS v4)
 │   └── server/                # Express backend (modular monolith architecture)
 ├── AGENTS.md                  # AI coding assistant guidelines and conventions
 ├── CLAUDE.md                  # Claude / CLI tool instructions

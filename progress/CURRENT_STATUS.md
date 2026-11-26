@@ -8,21 +8,21 @@
 
 ---
 
-> **Last Updated:** 2026-11-25
+> **Last Updated:** 2026-11-26
 >
 > **Current Stage:** Stage 1: Authentication & User Management
-> **Current Step:** Step 1.2: Error Handling & Utility Layer
-> **Overall Progress:** 5 / 55 steps completed
+> **Current Step:** Step 1.4: Login, JWT & Auth Middleware
+> **Overall Progress:** 7 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 1.2: Error Handling & Utility Layer
-- **What to do:** Build shared error handling (`ApiError`, `asyncHandler`, global error handler), `ApiResponse`, and `GET /api/v1/health`
+### Step 1.4: Login, JWT & Auth Middleware
+- **What to do:** Implement login (`POST /api/v1/auth/login`), logout (`POST /api/v1/auth/logout`), `GET /api/v1/auth/me`, JWT generation in httpOnly cookie, and `authenticate` middleware
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Ready for Step 1.2 study prep & implementation
+- **Notes:** Waiting for explicit user go-ahead after Step 1.4 study prep (JWT + httpOnly cookies)
 
 ---
 
@@ -30,6 +30,8 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 1.3 | User Model & Registration Endpoint | 2026-11-26 | user.model.js, user.service.js, auth.validation.js, auth.service.js, auth.controller.js, auth.routes.js, validate.js, app.js, ADR/TEMPLATE.md, ADR/003_authentication.md |
+| Step 1.2 | Error Handling & Utility Layer | 2026-11-25 | api-error.js, api-response.js, async-handler.js, error-handler.js, app.js, BACKEND_ARCHITECTURE.md, API_STANDARDS.md |
 | Step 1.1 | Express App & MongoDB Connection | 2026-11-25 | src/server/src/app.js, src/server/src/server.js, src/server/src/config/database.js, src/server/src/config/env.js, SETUP.md |
 | Step 0.4 | Set Up Development Tooling | 2026-11-24 | src/server/eslint.config.mjs, .prettierrc, .prettierignore, src/server/nodemon.json, README.md |
 | Step 0.3 | Create Phase 0 Documentation | 2026-11-24 | README.md, AGENTS.md, CLAUDE.md, docs/01_Product/PRD.md, docs/03_Architecture/SYSTEM_ARCHITECTURE.md, docs/03_Architecture/DATABASE_DESIGN.md |
@@ -45,10 +47,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 1.2 | Error Handling & Utility Layer | Build shared error handling and API response utilities |
-| Step 1.3 | User Model & Registration Endpoint | Create User Mongoose model and registration API endpoint |
 | Step 1.4 | Login, JWT & Auth Middleware | Implement login, JWT in httpOnly cookie, and route protection |
 | Step 1.5 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance |
+| Step 1.6 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation |
+| Step 1.7 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount |
 
 ---
 
@@ -57,7 +59,7 @@
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
 | Stage 0: Setup & Docs | ✅ Completed | 4 | 4 |
-| Stage 1: Auth & Users | 🟡 In Progress | 1 | 10 |
+| Stage 1: Auth & Users | 🟡 In Progress | 3 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
 | Stage 4: AI Features | ⬜ Not Started | 0 | 9 |
@@ -79,7 +81,11 @@
 | CLAUDE.md | Step 0.3 | ✅ Exists |
 | docs/01_Product/PRD.md | Step 0.3 | ✅ Exists |
 | docs/03_Architecture/SYSTEM_ARCHITECTURE.md | Step 0.3 | ✅ Exists |
+| docs/03_Architecture/BACKEND_ARCHITECTURE.md | Step 1.2 | ✅ Exists |
 | docs/03_Architecture/DATABASE_DESIGN.md | Step 0.3 | ✅ Exists |
+| docs/03_Architecture/ADR/TEMPLATE.md | Step 1.3 | ✅ Exists |
+| docs/03_Architecture/ADR/003_authentication.md | Step 1.3 | ✅ Exists |
+| docs/04_API/API_STANDARDS.md | Step 1.2 | ✅ Exists |
 | .gitignore | Step 0.1 | ✅ Exists |
 | .env.example | Step 0.1 | ✅ Exists |
 | src/client/package.json | Step 0.2 | ✅ Exists |
