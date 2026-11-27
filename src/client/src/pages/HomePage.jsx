@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useAuthStore } from '../stores/authStore.js';
 
 /**
  * Landing overview page inside MainLayout.
  */
 function HomePage() {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+
   return (
     <div className="flex flex-col gap-8 py-4">
       <section className="flex flex-col gap-4 border-b border-outline-variant/70 pb-8">
@@ -18,18 +21,29 @@ function HomePage() {
         </p>
 
         <div className="flex flex-wrap items-center gap-3 pt-2">
-          <Link
-            to="/register"
-            className="rounded-lg bg-primary px-5 py-2.5 text-[13px] font-medium text-on-primary shadow-sm transition-colors hover:bg-primary-hover"
-          >
-            Create workspace account
-          </Link>
-          <Link
-            to="/dashboard"
-            className="rounded-lg border border-outline-variant bg-surface-card px-5 py-2.5 text-[13px] font-medium text-on-surface transition-colors hover:bg-surface-low"
-          >
-            Preview dashboard
-          </Link>
+          {isAuthenticated ? (
+            <Link
+              to="/dashboard"
+              className="rounded-lg bg-primary px-5 py-2.5 text-[13px] font-medium text-on-primary shadow-sm transition-colors hover:bg-primary-hover"
+            >
+              Open dashboard
+            </Link>
+          ) : (
+            <>
+              <Link
+                to="/register"
+                className="rounded-lg bg-primary px-5 py-2.5 text-[13px] font-medium text-on-primary shadow-sm transition-colors hover:bg-primary-hover"
+              >
+                Create workspace account
+              </Link>
+              <Link
+                to="/login"
+                className="rounded-lg border border-outline-variant bg-surface-card px-5 py-2.5 text-[13px] font-medium text-on-surface transition-colors hover:bg-surface-low"
+              >
+                Sign in
+              </Link>
+            </>
+          )}
         </div>
       </section>
 

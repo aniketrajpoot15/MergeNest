@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import * as authService from '../services/authService.js';
 
+let activeCheckAuthPromise = null;
+
 /**
  * Global authentication state store backed by httpOnly JWT cookies on the API server.
  * Only safe user profile attributes are held in memory; JWT credentials never touch JS/localStorage.
@@ -10,6 +12,7 @@ export const useAuthStore = create((set) => ({
   isAuthenticated: false,
   isLoading: false,
   isCheckingAuth: false,
+  hasCheckedAuth: false,
   error: null,
 
   clearError: () => set({ error: null }),
@@ -44,6 +47,7 @@ export const useAuthStore = create((set) => ({
       set({
         user: authenticatedUser,
         isAuthenticated: Boolean(authenticatedUser),
+        hasCheckedAuth: true,
         isLoading: false,
       });
       return authenticatedUser;
@@ -63,6 +67,7 @@ export const useAuthStore = create((set) => ({
       set({
         user: null,
         isAuthenticated: false,
+        hasCheckedAuth: true,
         isLoading: false,
       });
     } catch (apiError) {
@@ -75,23 +80,36 @@ export const useAuthStore = create((set) => ({
   },
 
   checkAuth: async () => {
-    set({ isCheckingAuth: true });
-    try {
-      const response = await authService.getMe();
-      const currentUser = response.data?.user || null;
-      set({
-        user: currentUser,
-        isAuthenticated: Boolean(currentUser),
-        isCheckingAuth: false,
-      });
-      return currentUser;
-    } catch {
-      set({
-        user: null,
-        isAuthenticated: false,
-        isCheckingAuth: false,
-      });
-      return null;
+    if (activeCheckAuthPromise) {
+      return activeCheckAuthPromise;
     }
+
+    set({ isCheckingAuth: true });
+
+    activeCheckAuthPromise = (async () => {
+      try {
+        const response = await authService.getMe();
+        const currentUser = response.data?.user || null;
+        set({
+          user: currentUser,
+          isAuthenticated: Boolean(currentUser),
+          hasCheckedAuth: true,
+          isCheckingAuth: false,
+        });
+        return currentUser;
+      } catch {
+        set({
+          user: null,
+          isAuthenticated: false,
+          hasCheckedAuth: true,
+          isCheckingAuth: false,
+        });
+        return null;
+      } finally {
+        activeCheckAuthPromise = null;
+      }
+    })();
+
+    return activeCheckAuthPromise;
   },
 }));

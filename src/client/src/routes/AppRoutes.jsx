@@ -6,22 +6,34 @@ import HomePage from '../pages/HomePage.jsx';
 import NotFoundPage from '../pages/NotFoundPage.jsx';
 import LoginPage from '../pages/auth/LoginPage.jsx';
 import RegisterPage from '../pages/auth/RegisterPage.jsx';
+import ProtectedRoute from './ProtectedRoute.jsx';
+import PublicRoute from './PublicRoute.jsx';
 
 /**
- * Central client route configuration using nested layout routes.
+ * Central client route tree organized into open, protected, and guest-only auth zones.
  */
 function AppRoutes() {
   return (
     <Routes>
+      {/* Open routes accessible to all visitors */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
 
-      <Route element={<AuthLayout />}>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+      {/* Protected routes requiring an authenticated session */}
+      <Route element={<ProtectedRoute />}>
+        <Route element={<MainLayout />}>
+          <Route path="/dashboard" element={<DashboardPage />} />
+        </Route>
+      </Route>
+
+      {/* Guest-only auth screens */}
+      <Route element={<PublicRoute />}>
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Route>
       </Route>
     </Routes>
   );

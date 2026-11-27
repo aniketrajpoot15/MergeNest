@@ -22,6 +22,8 @@ function LoginPage() {
 
   const initialEmail = location.state?.registeredEmail || '';
   const justRegistered = Boolean(location.state?.registered);
+  const redirectedFrom = location.state?.from?.pathname;
+  const redirectTarget = redirectedFrom || '/dashboard';
 
   const [formValues, setFormValues] = useState({
     email: initialEmail,
@@ -66,7 +68,7 @@ function LoginPage() {
         `Welcome back, ${authenticatedUser?.name || 'developer'}!`,
         { title: 'Signed in' }
       );
-      navigate('/dashboard');
+      navigate(redirectTarget, { replace: true });
     } catch (apiError) {
       const apiFieldErrors = mapApiFieldErrors(apiError);
       const errorMessage =
@@ -92,6 +94,13 @@ function LoginPage() {
       {justRegistered && !formError && (
         <Alert variant="success" title="Registration complete">
           Your account has been created. Sign in below to start your session.
+        </Alert>
+      )}
+
+      {redirectedFrom && !justRegistered && !formError && (
+        <Alert variant="info" title="Sign in required">
+          Please sign in to access{' '}
+          <span className="font-mono text-[12px]">{redirectedFrom}</span>.
         </Alert>
       )}
 

@@ -26,7 +26,7 @@
 | **1.4** | Stage 1 | Login, JWT & Auth Middleware | Login endpoint, JWT generation in httpOnly cookie, auth middleware | ✅ |
 | **1.5** | Stage 1 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance | ✅ |
 | **1.6** | Stage 1 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation | ✅ |
-| **1.7** | Stage 1 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount | ⬜ |
+| **1.7** | Stage 1 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount | ✅ |
 | **1.8** | Stage 1 | User Profile (Backend + UI) | Profile view/edit endpoints, profile page with skills/bio | ⬜ |
 | **1.9** | Stage 1 | GitHub OAuth Connection | GitHub OAuth App flow, callback, encrypted token storage, connect/disconnect UI | ⬜ |
 | **1.10** | Stage 1 | Stage 1 Docs & Learning Update | ADRs (auth, DB, monolith), testing strategy, learning log & interview prep | ⬜ |
@@ -216,7 +216,7 @@
   - Loading spinner while checking auth
 - **Docs to update:** —
 - **Verify before moving on:** Can register → auto-login → see dashboard → refresh page → still logged in → logout → redirected to login → can't access dashboard directly
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 1.8: User Profile (Backend + UI)
 - **What to do:** Profile view and edit endpoints + profile page UI

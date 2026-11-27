@@ -1,6 +1,7 @@
-import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
+import Navbar from '../components/layout/Navbar.jsx';
 import BrandLogo from '../components/shared/BrandLogo.jsx';
-import ThemeToggle from '../components/shared/ThemeToggle.jsx';
+import { useAuthStore } from '../stores/authStore.js';
 
 const NAV_ITEMS = [
   { label: 'Overview', to: '/' },
@@ -9,11 +10,11 @@ const NAV_ITEMS = [
 
 /**
  * Primary workspace layout shell featuring adaptive light/dark editorial surfaces,
- * translucent frosted glass sidebar, top utility bar, and child <Outlet /> slot.
+ * translucent frosted glass sidebar, dynamic Navbar, and child <Outlet /> slot.
  */
 function MainLayout() {
-  const { pathname } = useLocation();
-  const isHomePage = pathname === '/';
+  const user = useAuthStore((state) => state.user);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
   return (
     <div className="relative flex min-h-screen bg-surface text-on-surface transition-colors duration-200">
@@ -55,43 +56,23 @@ function MainLayout() {
 
         <div className="border-t border-outline-variant/70 pt-4">
           <div className="flex items-center gap-2 text-[12px] text-on-surface-muted">
-            <span className="h-2 w-2 rounded-full bg-success" />
-            <span>Guest preview mode</span>
+            <span
+              className={`h-2 w-2 rounded-full ${
+                isAuthenticated ? 'bg-success' : 'bg-outline'
+              }`}
+            />
+            <span className="truncate">
+              {isAuthenticated && user
+                ? `Signed in · ${user.email}`
+                : 'Guest preview mode'}
+            </span>
           </div>
         </div>
       </aside>
 
       {/* Main Column */}
       <div className="relative z-10 flex min-w-0 flex-1 flex-col">
-        {/* Floating Glass Top Bar */}
-        <header className="sticky top-0 z-20 px-4 pt-4 pb-3 lg:px-8">
-          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 rounded-xl border border-outline-variant/75 bg-surface-card/75 px-4 py-2.5 shadow-[0_6px_22px_-6px_rgba(59,53,107,0.08)] backdrop-blur-xl">
-            <div className="flex items-center gap-4">
-              <div className="md:hidden">
-                <BrandLogo showSubtitle={false} />
-              </div>
-              <span className="hidden font-mono text-[12px] text-on-surface-muted sm:inline">
-                mergenest-workspace / v1
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              {isHomePage && <ThemeToggle />}
-              <Link
-                to="/login"
-                className="rounded-lg border border-outline-variant bg-surface-card px-3.5 py-1.5 text-[13px] font-medium text-on-surface transition-colors hover:bg-surface-low"
-              >
-                Log in
-              </Link>
-              <Link
-                to="/register"
-                className="rounded-lg bg-primary px-3.5 py-1.5 text-[13px] font-medium text-on-primary shadow-sm transition-colors hover:bg-primary-hover"
-              >
-                Sign up
-              </Link>
-            </div>
-          </div>
-        </header>
+        <Navbar />
 
         {/* Child Page Slot */}
         <main className="mx-auto w-full max-w-[1280px] flex-1 px-4 pt-3 pb-10 lg:px-8">

@@ -13,10 +13,10 @@
 src/client/src/
 ├── components/              # Reusable UI components
 │   ├── ui/                  # Base UI primitives (FormInput, Alert, ToastViewport)
-│   ├── layout/              # Layout sub-components (Sidebar, TopBar, Navbar)
-│   └── shared/              # Cross-cutting shared UI (BrandLogo, ThemeToggle)
+│   ├── layout/              # Layout sub-components (Navbar)
+│   └── shared/              # Cross-cutting shared UI (BrandLogo, LoadingSpinner, ThemeToggle)
 ├── layouts/                 # Route-level layout shells using <Outlet />
-│   ├── MainLayout.jsx       # Translucent glass sidebar + top bar + main workspace
+│   ├── MainLayout.jsx       # Translucent glass sidebar + Navbar + main workspace
 │   └── AuthLayout.jsx       # Centered glass card for login & registration
 ├── pages/                   # Route-level screens
 │   ├── auth/                # LoginPage, RegisterPage
@@ -25,8 +25,11 @@ src/client/src/
 │   ├── HomePage.jsx
 │   ├── DashboardPage.jsx
 │   └── NotFoundPage.jsx
-├── routes/                  # React Router nested route tree
-│   └── AppRoutes.jsx
+├── routes/                  # React Router nested route tree & guards
+│   ├── AppRoutes.jsx
+│   ├── AuthGuard.jsx        # Shared checkAuth() gate for protected/public routes
+│   ├── ProtectedRoute.jsx   # Redirects unauthenticated visitors to /login
+│   └── PublicRoute.jsx      # Redirects authenticated users away from /login & /register
 ├── services/                # Axios instance & domain API modules
 │   ├── api.js               # Configured Axios client (withCredentials: true)
 │   └── authService.js       # Auth API endpoints (/auth/register, /login, /logout, /me)
@@ -63,9 +66,10 @@ src/client/src/
 - **React Router (`BrowserRouter` + nested `<Route>`):**
   - Public/workspace screens nest inside `<MainLayout />` (renders `<Outlet />` inside the main content area).
   - Authentication screens (`/login`, `/register`) nest inside `<AuthLayout />`.
-- **Guards (added in Step 1.7 & Stage 2):**
-  - Protected routes wrap with `<ProtectedRoute />` checking authenticated session.
-  - Workspace-scoped routes validate workspace selection before loading project views.
+- **Guards:**
+  - Startup `checkAuth()` runs once on `<App />` mount via `useEffect`, keeping sessions intact across page refreshes via `httpOnly` cookies.
+  - Protected routes wrap with `<ProtectedRoute />` (waiting for `hasCheckedAuth` before redirecting to `/login` with `state.from`), while `/login` and `/register` wrap with `<PublicRoute />`.
+  - Workspace-scoped routes (Stage 2) validate workspace selection before loading project views.
 
 ---
 

@@ -11,18 +11,18 @@
 > **Last Updated:** 2026-11-27
 >
 > **Current Stage:** Stage 1: Authentication & User Management
-> **Current Step:** Step 1.7: Protected Routes & Navigation
-> **Overall Progress:** 10 / 55 steps completed
+> **Current Step:** Step 1.8: User Profile (Backend + UI)
+> **Overall Progress:** 11 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 1.7: Protected Routes & Navigation
-- **What to do:** Create `ProtectedRoute` and `PublicRoute` guards, Navbar user menu/logout, and `checkAuth()` session restore on mount
+### Step 1.8: User Profile (Backend + UI)
+- **What to do:** Build profile view & edit endpoints (`GET`/`PATCH /api/v1/users/profile`) and developer profile page (`avatar`, `name`, `bio`, `skills`)
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Waiting for user review and go-ahead on Step 1.7
+- **Notes:** Waiting for user review and go-ahead on Step 1.8
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 1.7 | Protected Routes & Navigation | 2026-11-27 | AuthGuard.jsx, ProtectedRoute.jsx, PublicRoute.jsx, Navbar.jsx, LoadingSpinner.jsx, App.jsx, AppRoutes.jsx, MainLayout.jsx, authStore.js |
 | Step 1.6 | Auth Pages & Auth State | 2026-11-27 | authStore.js, toastStore.js, authService.js, auth-validation.js, FormInput.jsx, Alert.jsx, ToastViewport.jsx, RegisterPage.jsx, LoginPage.jsx, DESIGN_SYSTEM.md |
 | Step 1.5 | Frontend Project Structure & Routing | 2026-11-27 | AppRoutes.jsx, MainLayout.jsx, AuthLayout.jsx, api.js, index.css (Stitch light/dark), useTheme.js, ThemeToggle.jsx, pages/*, FRONTEND_ARCHITECTURE.md |
 | Step 1.4 | Login, JWT & Auth Middleware | 2026-11-26 | jwt.js, authenticate.js, env.js, error-handler.js, user.service.js, auth.*, docs/05_Security/SECURITY.md |
@@ -50,10 +51,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 1.7 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount |
 | Step 1.8 | User Profile (Backend + UI) | Profile view/edit endpoints, profile page with skills/bio |
 | Step 1.9 | GitHub OAuth Connection | GitHub OAuth App flow, callback, encrypted token storage, connect/disconnect UI |
 | Step 1.10 | Stage 1 Docs & Learning Update | ADRs (auth, DB, monolith), testing strategy, learning log & interview prep |
+| Step 2.1 | Workspace Model & Backend CRUD | Workspace & WorkspaceMember schemas, CRUD service, controller & routes |
 
 ---
 
@@ -62,7 +63,7 @@
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
 | Stage 0: Setup & Docs | ✅ Completed | 4 | 4 |
-| Stage 1: Auth & Users | 🟡 In Progress | 6 | 10 |
+| Stage 1: Auth & Users | 🟡 In Progress | 7 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
 | Stage 4: AI Features | ⬜ Not Started | 0 | 9 |
