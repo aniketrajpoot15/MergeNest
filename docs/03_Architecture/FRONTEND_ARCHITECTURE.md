@@ -12,7 +12,7 @@
 ```text
 src/client/src/
 ├── components/              # Reusable UI components
-│   ├── ui/                  # Base UI primitives (Button, Card, Input, Badge)
+│   ├── ui/                  # Base UI primitives (FormInput, Alert, ToastViewport)
 │   ├── layout/              # Layout sub-components (Sidebar, TopBar, Navbar)
 │   └── shared/              # Cross-cutting shared UI (BrandLogo, ThemeToggle)
 ├── layouts/                 # Route-level layout shells using <Outlet />
@@ -28,10 +28,13 @@ src/client/src/
 ├── routes/                  # React Router nested route tree
 │   └── AppRoutes.jsx
 ├── services/                # Axios instance & domain API modules
-│   └── api.js               # Configured Axios client (withCredentials: true)
-├── stores/                  # Zustand global client state (authStore, workspaceStore)
-├── hooks/                   # Custom React hooks
-├── lib/                     # Pure helpers, formatters, constants
+│   ├── api.js               # Configured Axios client (withCredentials: true)
+│   └── authService.js       # Auth API endpoints (/auth/register, /login, /logout, /me)
+├── stores/                  # Zustand global client state
+│   ├── authStore.js         # Authenticated user session state & actions
+│   └── toastStore.js        # Global toast notification queue
+├── hooks/                   # Custom React hooks (useTheme)
+├── lib/                     # Pure helpers, validators, constants (auth-validation.js)
 ├── App.jsx                  # Wraps AppRoutes in BrowserRouter
 ├── index.css                # Tailwind CSS v4 @import + Stitch Editorial @theme tokens
 └── main.jsx                 # React DOM mount

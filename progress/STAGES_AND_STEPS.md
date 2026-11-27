@@ -25,7 +25,7 @@
 | **1.3** | Stage 1 | User Model & Registration Endpoint | User schema, bcrypt password hash, register endpoint & Zod validation | ✅ |
 | **1.4** | Stage 1 | Login, JWT & Auth Middleware | Login endpoint, JWT generation in httpOnly cookie, auth middleware | ✅ |
 | **1.5** | Stage 1 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance | ✅ |
-| **1.6** | Stage 1 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation | ⬜ |
+| **1.6** | Stage 1 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation | ✅ |
 | **1.7** | Stage 1 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount | ⬜ |
 | **1.8** | Stage 1 | User Profile (Backend + UI) | Profile view/edit endpoints, profile page with skills/bio | ⬜ |
 | **1.9** | Stage 1 | GitHub OAuth Connection | GitHub OAuth App flow, callback, encrypted token storage, connect/disconnect UI | ⬜ |
@@ -204,7 +204,7 @@
 - **Docs to create:** DESIGN_SYSTEM.md
 - **Docs to update:** —
 - **Verify before moving on:** Can fill register form → submits → user created. Can fill login form → submits → user data stored in Zustand. Errors shown for invalid input.
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 1.7: Protected Routes & Navigation
 - **What to do:** Create ProtectedRoute component, navigation bar, auto-login on refresh
