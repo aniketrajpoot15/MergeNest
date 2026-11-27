@@ -8,21 +8,21 @@
 
 ---
 
-> **Last Updated:** 2026-11-26
+> **Last Updated:** 2026-11-27
 >
 > **Current Stage:** Stage 1: Authentication & User Management
-> **Current Step:** Step 1.5: Frontend Project Structure & Routing
-> **Overall Progress:** 8 / 55 steps completed
+> **Current Step:** Step 1.6: Auth Pages & Auth State
+> **Overall Progress:** 9 / 55 steps completed
 
 ---
 
 ## 🟢 Currently Working On
 
-### Step 1.5: Frontend Project Structure & Routing
-- **What to do:** Set up React Router v6, `MainLayout`, `AuthLayout`, placeholder pages, and Axios API client (`withCredentials: true`)
+### Step 1.6: Auth Pages & Auth State
+- **What to do:** Build interactive Login & Register forms, Zustand `authStore`, client validation, and toast/alert feedback
 - **Started:** —
 - **Blockers:** None
-- **Notes:** Waiting for explicit user go-ahead after Step 1.5 prep
+- **Notes:** Waiting for explicit user go-ahead after Step 1.6 prep (Zustand state management)
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Step | Title | Completed | Key Files Created/Changed |
 |---|---|---|---|
+| Step 1.5 | Frontend Project Structure & Routing | 2026-11-27 | AppRoutes.jsx, MainLayout.jsx, AuthLayout.jsx, api.js, index.css (Stitch light/dark), useTheme.js, ThemeToggle.jsx, pages/*, FRONTEND_ARCHITECTURE.md |
 | Step 1.4 | Login, JWT & Auth Middleware | 2026-11-26 | jwt.js, authenticate.js, env.js, error-handler.js, user.service.js, auth.*, docs/05_Security/SECURITY.md |
 | Step 1.3 | User Model & Registration Endpoint | 2026-11-26 | user.model.js, user.service.js, auth.validation.js, auth.service.js, auth.controller.js, auth.routes.js, validate.js, app.js, ADR/TEMPLATE.md, ADR/003_authentication.md |
 | Step 1.2 | Error Handling & Utility Layer | 2026-11-25 | api-error.js, api-response.js, async-handler.js, error-handler.js, app.js, BACKEND_ARCHITECTURE.md, API_STANDARDS.md |
@@ -48,10 +49,10 @@
 
 | Step | Title | What It Involves |
 |---|---|---|
-| Step 1.5 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance |
 | Step 1.6 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation |
 | Step 1.7 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount |
 | Step 1.8 | User Profile (Backend + UI) | Profile view/edit endpoints, profile page with skills/bio |
+| Step 1.9 | GitHub OAuth Connection | GitHub OAuth App flow, callback, encrypted token storage, connect/disconnect UI |
 
 ---
 
@@ -60,7 +61,7 @@
 | Stage | Status | Steps Done | Total Steps |
 |---|---|---|---|
 | Stage 0: Setup & Docs | ✅ Completed | 4 | 4 |
-| Stage 1: Auth & Users | 🟡 In Progress | 4 | 10 |
+| Stage 1: Auth & Users | 🟡 In Progress | 5 | 10 |
 | Stage 2: Workspaces & Projects | ⬜ Not Started | 0 | 8 |
 | Stage 3: GitHub Integration | ⬜ Not Started | 0 | 8 |
 | Stage 4: AI Features | ⬜ Not Started | 0 | 9 |
@@ -83,6 +84,7 @@
 | docs/01_Product/PRD.md | Step 0.3 | ✅ Exists |
 | docs/03_Architecture/SYSTEM_ARCHITECTURE.md | Step 0.3 | ✅ Exists |
 | docs/03_Architecture/BACKEND_ARCHITECTURE.md | Step 1.2 | ✅ Exists |
+| docs/03_Architecture/FRONTEND_ARCHITECTURE.md | Step 1.5 | ✅ Exists |
 | docs/03_Architecture/DATABASE_DESIGN.md | Step 0.3 | ✅ Exists |
 | docs/03_Architecture/ADR/TEMPLATE.md | Step 1.3 | ✅ Exists |
 | docs/03_Architecture/ADR/003_authentication.md | Step 1.3 | ✅ Exists |

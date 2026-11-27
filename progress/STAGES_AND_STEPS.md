@@ -24,7 +24,7 @@
 | **1.2** | Stage 1 | Error Handling & Utility Layer | ApiError class, ApiResponse, asyncHandler, global error handler, health check | ✅ |
 | **1.3** | Stage 1 | User Model & Registration Endpoint | User schema, bcrypt password hash, register endpoint & Zod validation | ✅ |
 | **1.4** | Stage 1 | Login, JWT & Auth Middleware | Login endpoint, JWT generation in httpOnly cookie, auth middleware | ✅ |
-| **1.5** | Stage 1 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance | ⬜ |
+| **1.5** | Stage 1 | Frontend Project Structure & Routing | React Router v6 setup, layouts, Axios API client instance | ✅ |
 | **1.6** | Stage 1 | Auth Pages & Auth State | Login & Register pages, Zustand auth store, client form validation | ⬜ |
 | **1.7** | Stage 1 | Protected Routes & Navigation | ProtectedRoute wrapper, Navbar with user status, session check on mount | ⬜ |
 | **1.8** | Stage 1 | User Profile (Backend + UI) | Profile view/edit endpoints, profile page with skills/bio | ⬜ |
@@ -191,7 +191,7 @@
 - **Docs to create:** FRONTEND_ARCHITECTURE.md
 - **Docs to update:** —
 - **Verify before moving on:** React app shows different pages for `/`, `/login`, `/register`, `/dashboard` routes. Axios instance is configured.
-- **Status:** ⬜
+- **Status:** ✅
 
 ### Step 1.6: Auth Pages & Auth State
 - **What to do:** Build Login and Register pages with forms, set up Zustand auth store
