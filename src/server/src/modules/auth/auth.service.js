@@ -1,5 +1,6 @@
 import bcrypt from 'bcryptjs';
 import { ApiError } from '../../shared/utils/api-error.js';
+import { signAuthToken } from '../../shared/utils/jwt.js';
 import * as userService from '../users/user.service.js';
 
 // Cost factor 12+ per docs/05_Security/SECURITY.md specification
@@ -26,4 +27,31 @@ export const register = async ({ name, email, password }) => {
   });
 
   return userService.toSafeUser(createdUser);
+};
+
+/**
+ * Verify email/password credentials and return safe user profile + signed JWT.
+ * @param {{ email: string, password: string }} credentials
+ * @returns {Promise<{ user: object, token: string }>}
+ */
+export const login = async ({ email, password }) => {
+  const user = await userService.findUserByEmail(email, {
+    includePassword: true,
+  });
+
+  if (!user || !user.password) {
+    throw new ApiError(401, 'Invalid email or password');
+  }
+
+  const isPasswordValid = await bcrypt.compare(password, user.password);
+  if (!isPasswordValid) {
+    throw new ApiError(401, 'Invalid email or password');
+  }
+
+  const token = signAuthToken(user._id.toString());
+
+  return {
+    user: userService.toSafeUser(user),
+    token,
+  };
 };

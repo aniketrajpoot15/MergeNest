@@ -31,6 +31,14 @@ const normalizeError = (error) => {
     return new ApiError(400, `Invalid ${error.path} format`);
   }
 
+  if (error.name === 'TokenExpiredError') {
+    return new ApiError(401, 'Session expired. Please log in again.');
+  }
+
+  if (error.name === 'JsonWebTokenError') {
+    return new ApiError(401, 'Invalid authentication token');
+  }
+
   if (error.code === 11000 && error.keyValue) {
     const duplicateField = Object.keys(error.keyValue)[0];
     return new ApiError(409, `${duplicateField} already exists`);

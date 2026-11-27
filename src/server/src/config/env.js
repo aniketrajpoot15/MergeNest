@@ -32,6 +32,15 @@ const envSchema = z.object({
     .string()
     .url('CLIENT_URL must be a valid URL')
     .default('http://localhost:5173'),
+  JWT_SECRET: z
+    .string({ required_error: 'JWT_SECRET is required' })
+    .trim()
+    .min(32, 'JWT_SECRET must be at least 32 characters')
+    .refine(
+      (secret) => !secret.includes('your_jwt_secret_key'),
+      'JWT_SECRET must be replaced with a real random secret'
+    ),
+  JWT_EXPIRES_IN: z.string().trim().min(1).default('7d'),
   COOKIE_SECRET: z.string().optional(),
 });
 

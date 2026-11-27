@@ -38,6 +38,13 @@ export const findUserByEmail = async (
 };
 
 /**
+ * Find a user by MongoDB ObjectId.
+ * @param {string} userId
+ * @returns {Promise<import('mongoose').Document | null>}
+ */
+export const findUserById = async (userId) => User.findById(userId).exec();
+
+/**
  * Create a new User document in MongoDB.
  * @param {{ name: string, email: string, password?: string }} userData
  * @returns {Promise<import('mongoose').Document>}
